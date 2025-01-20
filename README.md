@@ -1,4 +1,4 @@
-# Hat606
+# clihat
 
 A minimal command-line utility in C that generates a TR-606–style hi-hat as a 24-bit, 48 kHz WAV.  
 It writes the WAV data either to `stdout` or to a specified file.
@@ -18,14 +18,14 @@ Make sure you have a C compiler (e.g., `gcc`) and (optionally) `make`.
 
 ```
 
-This will produce an executable, e.g. hat606.
-Or compile directly:
+This will produce an executable, e.g. clihat.
+Or, compile directly with whatever compatible compiler you want!  I'm not your dad.
 
 
 ## Usage:
 
 ```bash
-  ./hat606 <tune> <decay> <level> <open> [-o <output.wav>]
+  ./clihat <tune> <decay> <level> <open> [-o <output.wav>]
 
 ```
 
@@ -44,7 +44,7 @@ Where each parameter is in the range 0.0 to 1.0.
 ### Closed hat:
 
 ```bash
-./hat606 0.5 0.3 1.0 0.0 -o closedHat.wav
+./clihat 0.5 0.3 1.0 0.0 -o closedHat.wav
 
 ```
 Middle tune, moderate decay, full volume, fully closed.
@@ -52,7 +52,7 @@ Middle tune, moderate decay, full volume, fully closed.
 ### Open hat:
 
 ```bash
-./hat606 0.5 0.3 1.0 1.0 -o openHat.wav
+./clihat 0.5 0.3 1.0 1.0 -o openHat.wav
 
 ```
 
@@ -61,7 +61,7 @@ Same tuning, but extended decay for an open-style sound.
 ### Pipe directly to playback (Linux + SoX):
 
 ```bash
-./hat606 0.7 0.5 1.0 1.0 | play -t wav -
+./clihat 0.7 0.5 1.0 1.0 | play -t wav -
 
 ```
 
